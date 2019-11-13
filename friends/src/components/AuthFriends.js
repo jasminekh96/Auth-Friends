@@ -36,6 +36,11 @@ const AuthFriends = ({ setFriends }) => {
 			.catch((err) => {
 				console.log('Failed', err);
 			});
+		setNewFriend({
+			name  : '',
+			age   : '',
+			email : '',
+		});
 	};
 	return (
 		<div>
