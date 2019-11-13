@@ -5,6 +5,7 @@ import './App.css';
 import Login from './components/Login';
 import AuthFriends from './components/AuthFriends';
 import PrivateRoute from './components/PrivateRoute';
+import Friends from './components/Friends';
 
 function App() {
 	return (
@@ -19,7 +20,8 @@ function App() {
 					</h2>
 				</div>
 				<Switch>
-					<PrivateRoute exact path='/private' component={AuthFriends} />
+					<PrivateRoute exact path='/private' component={Friends} />
+
 					<Route path='/login' component={Login} />
 					<Route component={Login} />
 				</Switch>
