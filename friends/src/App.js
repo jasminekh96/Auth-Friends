@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 import Login from './components/Login';
-import AuthFriends from './components/AuthFriends';
 import PrivateRoute from './components/PrivateRoute';
 import Friends from './components/Friends';
 
