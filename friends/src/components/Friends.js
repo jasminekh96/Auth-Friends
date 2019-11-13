@@ -1,6 +1,17 @@
 import React from 'react';
 import AuthFriends from './AuthFriends';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
+import styled from 'styled-components';
+
+const Name = styled.h2`
+	color: #008b8b;
+	font-size: 2.0rem;
+`;
+const Age = styled.h4`
+	color: white;
+	font-size: 1.5rem;
+`;
+const Email = styled.h4`color: #d3d3d3;`;
 
 class Friends extends React.Component {
 	state = {
@@ -26,9 +37,9 @@ class Friends extends React.Component {
 				<AuthFriends setFriends={this.setFriends} />
 				{this.state.friends.map((item) => (
 					<div key={item.id}>
-						<h2>Name: {item.name}</h2>
-						<h4>Age: {item.age}</h4>
-						<h4>Email: {item.email}</h4>
+						<Name>Name: {item.name}</Name>
+						<Age>Age: {item.age}</Age>
+						<Email>Email: {item.email}</Email>
 					</div>
 				))}
 			</div>

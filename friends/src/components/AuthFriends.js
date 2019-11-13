@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
+import styled from 'styled-components';
 
+const AddForm = styled.input`
+	margin-right: 20px;
+	border-radius: 10px;
+	padding: 10px;
+`;
+const Buttons = styled.button`
+	background-color: #808000;
+	color: white;
+	border-radius: 10px;
+	font-size: 1.0rem;
+`;
 const AuthFriends = ({ setFriends }) => {
 	const [ newFriend, setNewFriend ] = useState({
 		name  : '',
@@ -27,10 +39,10 @@ const AuthFriends = ({ setFriends }) => {
 	};
 	return (
 		<div>
-			<input type='text' name='name' value={newFriend.name} onChange={handleChanges} placeholder='Name' />
-			<input type='text' name='age' value={newFriend.age} onChange={handleChanges} placeholder='Age' />
-			<input type='text' name='email' value={newFriend.email} onChange={handleChanges} placeholder='Email' />
-			<button onClick={() => friendPosted(newFriend)}>Add Friend</button>
+			<AddForm type='text' name='name' value={newFriend.name} onChange={handleChanges} placeholder='Name' />
+			<AddForm type='text' name='age' value={newFriend.age} onChange={handleChanges} placeholder='Age' />
+			<AddForm type='text' name='email' value={newFriend.email} onChange={handleChanges} placeholder='Email' />
+			<Buttons onClick={() => friendPosted(newFriend)}>Add Friend</Buttons>
 		</div>
 	);
 };
